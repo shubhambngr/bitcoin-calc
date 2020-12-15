@@ -4,6 +4,7 @@ const request = require("request");
 const port = process.env.PORT || 3001;
 const cors = require("cors");
 const path = require("path");
+require("dotenv").config();
 
 const app = express();
 
@@ -36,11 +37,11 @@ app.post("/convert", (req, res) => {
   const crypto = req.body.currentCrypto;
   const fiat = req.body.currentFiat;
 
-  if (amount || crypto || fiat) {
+  if (amount && crypto && fiat) {
     var options = {
       url: "https://rest.coinapi.io/v1/exchangerate/" + crypto + "/" + fiat,
       headers: {
-        "X-CoinAPI-Key": "E4A02E4A-0B8D-4091-B036-6EB83866806E",
+        "X-CoinAPI-Key": process.env.API_KEY,
       },
     };
     request(options, (error, response, body) => {
@@ -48,8 +49,6 @@ app.post("/convert", (req, res) => {
       global.finalRate = amount * cryptoData.rate;
       res.status(200).send(finalRate.toString());
     });
-  } else {
-    console.log("empty input");
   }
 });
 

@@ -7,7 +7,7 @@ function Currency(props) {
 
   const handleCurrencyChange = (event) => {
     setCurrency(event.target.value);
-    props.valueTransfer(event.target.value);
+    props.valueTransfer(event.target.value, event.target.name);
   };
 
   return (
@@ -15,7 +15,7 @@ function Currency(props) {
       <TextField
         id="standard-select-currency"
         select
-        label={props.currencyType}
+        name={props.type}
         value={currency}
         onChange={handleCurrencyChange}
         helperText="Please select your currency"

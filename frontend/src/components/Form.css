@@ -6,3 +6,28 @@ form p {
   display: inline-block;
   margin: 0.75rem 0.5rem;
 }
+
+@media (max-width: 560px) {
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  div.button {
+    align-self: flex-start;
+    align-self: center;
+    display: block;
+  }
+
+  .MuiFormControl-root {
+    display: block !important;
+  }
+
+  form * {
+    display: block !important;
+  }
+
+  .MuiInputLabel-formControl {
+    position: relative !important;
+  }
+}
