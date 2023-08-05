@@ -37,7 +37,7 @@ function Form() {
 
   function handleClick(event) {
     event.preventDefault();
-    const url = "https://bitcoincalc.herokuapp.com";
+    const url = "https://bitcoincalc-86821bc3d940.herokuapp.com";
     Axios.post(`${url}/convert`, chosenValues)
       .then(function (response) {
         setRateReceived(true);
