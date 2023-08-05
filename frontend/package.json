@@ -2,7 +2,7 @@
   "name": "react-and-node",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://bitcoincalc.herokuapp.com",
+  "proxy": "https://bitcoincalc-86821bc3d940.herokuapp.com",
   "dependencies": {
     "@material-ui/core": "^4.11.2",
     "@material-ui/icons": "^4.11.2",
