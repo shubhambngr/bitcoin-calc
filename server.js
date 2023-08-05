@@ -19,7 +19,7 @@ app.use(
 
 app.use(
   cors({
-    origin: "https://bitcoincalc.herokuapp.com",
+    origin: "https://bitcoincalc-86821bc3d940.herokuapp.com",
     credentials: true,
   })
 );
