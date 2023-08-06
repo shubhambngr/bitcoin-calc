@@ -2,32 +2,107 @@ form {
   margin-top: 2rem;
 }
 
-form p {
-  display: inline-block;
-  margin: 0.75rem 0.5rem;
-}
-
 @media (max-width: 560px) {
   form {
-    display: flex;
-    flex-direction: column;
+	display: flex;
+	flex-direction: column;
   }
 
   div.button {
-    align-self: flex-start;
-    align-self: center;
-    display: block;
+	align-self: flex-start;
+	align-self: center;
+	display: block;
   }
 
   .MuiFormControl-root {
-    display: block !important;
+	display: block !important;
   }
 
   form * {
-    display: block !important;
+	display: block !important;
   }
 
   .MuiInputLabel-formControl {
-    position: relative !important;
+	position: relative !important;
   }
+
+  .convert-button-wrapper {
+		display: flex !important;
+		justify-content: center;    
+  }
+
+  .MuiInputAdornment-root {
+	display: none !important;
+  }
+
+  .amount-input > label {
+	margin-bottom: -1.25em !important;
+	margin-left: 2.5em !important;
+  }
+
+  #select-currency {
+	margin-bottom: -0.75em !important;
+	margin-left: -2em !important;
+  }
+
+  #standard-number {
+	text-align: center;
+  }
+}
+
+.form-text {
+	display: none;
+	font-size: 0.8rem;
+	margin-top: 0.25rem;
+	color: #6c757d;
+}
+
+.input-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.input-wrapper > div {
+	margin: 0 35px;
+}
+
+.input-wrapper > .amount-input {
+	margin-top: 10px;
+}
+
+.input-wrapper > .amount-input * {
+	font-family: 'Montserrat', sans-serif;
+}
+
+.loader {
+	display: block;
+	margin: 1em auto;
+}
+
+.convert-button-wrapper {
+	display: block;
+	text-align: center;
+}
+
+.convert-button {
+	width: 220px;
+	padding: 12px;
+	margin: 20px 20px 0;
+	border: none;
+	border-radius: 4px;
+	background-color: #a6da8d;
+	color: #eee;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.convert-button:hover {
+  	background-color: #88CE66;
+}
+
+.convert-button:disabled {
+	background-color: #ccc;
+	color: #eee;
+	cursor: not-allowed;
 }

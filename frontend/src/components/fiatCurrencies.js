@@ -4,10 +4,6 @@ const fiatCurrencies = [
     label: "$",
   },
   {
-    value: "INR",
-    label: "₹",
-  },
-  {
     value: "CAD",
     label: "C$",
   },

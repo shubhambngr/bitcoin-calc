@@ -8,9 +8,22 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: #282c34;
+  position: relative;
 }
 
 .logo {
-  height: 100px;
-  width: 100px;
+    margin: 2em 5em;
+    height: 120px;
+    width: 120px;
+}
+
+.attribute-link {
+    display: block;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  padding: 10px 0;
+  color: #666;
+  text-decoration: none;
+  font-size: 10px;
 }
